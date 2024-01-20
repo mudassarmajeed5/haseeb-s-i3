@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+wall=$(find ~/Pictures/Wallpapers/ -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
+
+#Adding Wallpaper
+feh --bg-fill $wall
+
+#Generating Color Scheme
+wal -c
+wal -i $wall
+
+xdotool key Alt+shift+F5
